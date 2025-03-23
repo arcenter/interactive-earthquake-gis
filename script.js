@@ -68,6 +68,14 @@ require([
         { name: "OBJECTID", label: "OBJECTID" }
     ]
 
+    function toTitleCase(str) {
+        return str
+            .toLowerCase() // Convert the entire string to lowercase
+            .split(' ') // Split the string into words
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+            .join(' '); // Join the words back into a single string
+    }
+
     view.on("click", function(event) {
         view.hitTest(event).then(function(response) {
             if (response.results.length > 0) {
@@ -79,19 +87,21 @@ require([
 
                     var limit = 0;
 
-                    let content = "<h3>Earthquake Details</h3>";
+                    let content = "<b style='font-size: 24px;'>Earthquake Details</b><br><br>";
                     
                     attributeList.forEach(attribute => {
                         if (limit < 7) {
-                            const value = graphic.attributes[attribute.name];
+                            var value = graphic.attributes[attribute.name];
                             if (value !== null && value !== undefined) {
-                                content += `<b>${attribute.label}:</b> ${value} <br><br>`;
+                                if (attribute.name == "Location_Name")
+                                    value = toTitleCase(value).split(': ').reverse().join(', ');
+                                content += `<b>${attribute.label}:</b> ${value} <br>`;
                                 limit++;
                             }
                         }
                     })
                     
-                    content += `<button onclick="closePopup()">Close</button>`;                
+                    content += `<br><button onclick="closePopup()">Close</button>`;                
                         
                     customPopup.innerHTML = content;
 
