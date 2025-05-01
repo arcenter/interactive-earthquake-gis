@@ -1,4 +1,4 @@
-# Earthquake Map 🌍
+# ArcQuake: Interactive Earthquake Visualizer 🌍
 
 An interactive web based GIS application that visualizes earthquake data using the ArcGIS API for JavaScript.
 
