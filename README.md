@@ -1,25 +1,24 @@
-# ArcQuake: Interactive Earthquake Visualizer 🌍
+# ArcQuake: Interactive Earthquake Visualizer
 
 An interactive web based GIS application that visualizes earthquake data using the ArcGIS API for JavaScript.
 
-## Features 🚀
+## Features
 
 - Displays certain real-time and historical earthquake data on an interactive map.
 - Clickable markers show detailed earthquake information in a popup.
 - Zooming for better visualization.
 - Uses **ArcGIS API for JavaScript** for rendering map layers.
 
-## Screenshot 📷
+## Screenshot
 
 ![Earthquake Map Screenshot](interface.png)
 
-## Technologies Used 🛠️
+## Technologies Used
 
 - **ArcGIS API for JavaScript** – for rendering maps.
 - **HTML, CSS, JavaScript** – core web technologies.
 
-## Setup & Installation 🔧
-
+## Setup & Installation
 1. Clone the repository:
 
    ```sh
@@ -34,26 +33,26 @@ An interactive web based GIS application that visualizes earthquake data using t
 
 3. Open `index.html` in a web browser.
 
-## Usage 🎯
+## Usage
 
 - Click on an earthquake marker to view details.
 - Zoom in/out and pan to explore different regions.
 - Modify the **JavaScript code** to customize popups or add new features.
 
-## Live Demo 🌍
+## Live Demo
 
 Visit the page with its [Live Demo](https://arcenter.github.io/interactive-earthquake-gis/).
 
-## To-Do / Future Improvements 📝
+## To-Do / Future Improvements
 
 - [ ] Add search functionality for locations.
 - [ ] Implement filtering by date/magnitude.
 - [ ] Improve UI with better styling.
 
-## Contributing 🤝
+## Contributing
 
 Pull requests are welcome! If you'd like to contribute, feel free to fork the repo and submit a PR.
 
-## License 📜
+## License
 
 This project is licensed under the **MIT License**.
